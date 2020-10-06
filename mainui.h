@@ -49,8 +49,6 @@ private slots:
 
     void on_togButton_clicked(bool checked);
 
-    void on_textEdit_textChanged();
-
     void on_codButton_clicked(bool checked);
 
 private:

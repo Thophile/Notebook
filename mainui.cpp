@@ -179,10 +179,6 @@ void MainUi::on_togButton_clicked(bool checked)
     ui->togButton->setIcon(*ico);
 }
 
-void MainUi::on_textEdit_textChanged()
-{
-}
-
 void MainUi::on_codButton_clicked(bool checked)
 {
     this->displaySrc = checked;
