@@ -186,9 +186,16 @@ void MainUi::on_textEdit_textChanged()
 void MainUi::on_codButton_clicked(bool checked)
 {
     this->displaySrc = checked;
-    if(checked)
-        ui->textEdit->setPlainText(ui->textEdit->toMarkdown());
-    else
-        ui->textEdit->setMarkdown(ui->textEdit->toPlainText());
+    if(checked){
+
+        QString tmp = ui->textEdit->toMarkdown();
+        ui->textEdit->clear();
+        ui->textEdit->setPlainText(tmp);
+    }
+    else {
+        QString tmp = ui->textEdit->toPlainText();
+        ui->textEdit->clear();
+        ui->textEdit->setMarkdown(tmp);
+    }
 
 }
