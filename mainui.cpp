@@ -191,6 +191,7 @@ void MainUi::on_codButton_clicked(bool checked)
         QString tmp = ui->textEdit->toMarkdown();
         ui->textEdit->clear();
         ui->textEdit->setPlainText(tmp);
+        ui->textEdit->setStyleSheet("");
     }
     else {
         QString tmp = ui->textEdit->toPlainText();
