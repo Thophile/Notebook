@@ -87,11 +87,11 @@ MainWindow::MainWindow(QWidget *parent) : QGoodWindow(parent)
 
 #endif
 
-    QPixmap img(":/icons/Notebook.ico");
+    QPixmap img(":/icons/placeholder.ico");
 
     setWindowIcon(img);
 
-    setWindowTitle("Notebook");
+    setWindowTitle("Caesar");
 
 
 }
