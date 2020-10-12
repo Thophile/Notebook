@@ -22,16 +22,19 @@ void MainUi::on_translateButton_clicked()
     QString result = "";
     int offset = ui->spinBox->value();
     int latin1;
+
+
     for(int i = 0; i < input.length(); i++){
-       if( noTranslate.contains(input.at(i))) continue;
-       else{
+
            if (isupper(input.at(i).toLatin1())){
                latin1 = (input.at(i).toLatin1() - 65 + offset) % 26 + 65;
-           }else{
+           }else if(islower(input.at(i).toLatin1())){
                 latin1 = (input.at(i).toLatin1() - 97 + offset) % 26 + 97;
+           }else{
+               continue;
            }
            input.replace(i,1,QChar(latin1));
-       }
+
 
     }
     ui->Result->setText(input);
