@@ -16,6 +16,7 @@
         <file>icons/restore-active-light.ico</file>
         <file>icons/restore-inactive-dark.ico</file>
         <file>icons/restore-inactive-light.ico</file>
+        <file>icons/Notebook.ico</file>
         <file>icons/add_dark.ico</file>
         <file>icons/add_light.ico</file>
         <file>icons/bin_dark.ico</file>
@@ -25,6 +26,5 @@
         <file>icons/chev_left.ico</file>
         <file>icons/chev_right.ico</file>
         <file>icons/code.ico</file>
-        <file>icons/placeholder.ico</file>
     </qresource>
 </RCC>

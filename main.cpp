@@ -36,5 +36,6 @@ int main(int argc, char *argv[])
     w.setMinimumSize(400,150);
 
     int ret = a.exec();
+    w.main_ui->autoSave();
     return ret;
 }

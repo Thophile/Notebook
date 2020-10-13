@@ -4,8 +4,10 @@ win32:QT += winextras
 
 CONFIG   += c++11
 
-TARGET = GoodShowCase
+TARGET = Notebook
+RC_ICONS = $$PWD/icons/Notebook.ico
 TEMPLATE = app
+
 
 SOURCES += \
         main.cpp \
