@@ -15,24 +15,6 @@ MainUi::~MainUi()
     delete ui;
 }
 
-void MainUi::on_translateButton_clicked()
-{
-    QString noTranslate = " 0123456789";
-    QString input = ui->Input->toPlainText();
-    QString result = "";
-    int offset = ui->spinBox->value();
-    int latin1;
-    for(int i = 0; i < input.length(); i++){
-       if( noTranslate.contains(input.at(i))) continue;
-       else{
-           if (isupper(input.at(i).toLatin1())){
-               latin1 = (input.at(i).toLatin1() - 65 + offset) % 26 + 65;
-           }else{
-                latin1 = (input.at(i).toLatin1() - 97 + offset) % 26 + 97;
-           }
-           input.replace(i,1,QChar(latin1));
-       }
 
     }
-    ui->Result->setText(input);
 }
