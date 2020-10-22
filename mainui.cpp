@@ -1,6 +1,7 @@
 #include "mainui.h"
 #include "ui_mainui.h"
 #include <QObject>
+#include <QDir>
 
 MainUi::MainUi(QWidget *parent) :
     QWidget(parent),
@@ -36,9 +37,12 @@ MainUi::~MainUi()
 
 //Load the json data
 QJsonDocument MainUi::loadJson(QString fileName) {
+    //Create directory if it does not exist
+    QDir dir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
+    if (!dir.exists())dir.mkpath(".");
 
     QFile jsonFile(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +"/"+ fileName);
-    jsonFile.open(QFile::ReadOnly);
+    jsonFile.open(QFile::ReadWrite);
     return QJsonDocument().fromJson(jsonFile.readAll());
 }
 
